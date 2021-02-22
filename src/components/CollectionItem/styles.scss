@@ -1,0 +1,69 @@
+.shop-item{
+     width: 23.8%;
+     height: 350px;
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 50px;
+     cursor: pointer;
+   
+}
+.shop-item:hover{
+     .collection-button{
+          width: 200px;
+          background-color: rgb(253, 253, 253);
+          display: block;
+          height: 50px;
+          margin-top: -70px;
+          margin-left: 50px;
+          opacity: 0.9;
+          border: 1px solid black;
+          p{
+               text-align: center;
+               text-transform: uppercase;
+               font-size:16px ;
+               font-weight:400 ;
+          }
+     }
+     .collection-button:hover{
+          display: block;
+          background-color: black;
+          p{
+               text-align: center;
+               text-transform: uppercase;
+               font-size:16px ;
+               font-weight:400 ;
+               color: white;
+          }
+     }
+     
+}
+.shop-item-container{
+     width: 100%;
+     height: 90%;
+     img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+     }
+}
+.shop-item-footer{
+     width: 100%;
+     height: 10%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     h1{
+          width: fit-content;
+          font-size: 18px;
+          font-weight:300;
+          font-style:normal ;
+     }
+}
+.collection-button{
+     position: absolute;
+     display: none;
+}
+.collection-button:hover{
+     display: block;
+     background-color: black;
+}
