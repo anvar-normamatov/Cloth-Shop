@@ -1,18 +1,18 @@
 import React from 'react';
-import "./styles.scss";
+import {Container} from "./styles.js";
 import collection from "../../mock/collection";
 import CollectionPreview from '../../components/CollectionPreview';
 
 
 const CollectionOverview = () =>{
     return(
-        <div className="collection-overview">
+        <Container>
             {
                 collection.map(({id, ...otherProps}) => (
                     <CollectionPreview key={id}{...otherProps}/>
                 ))
             }
-        </div>
+        </Container>
        
     )
 }

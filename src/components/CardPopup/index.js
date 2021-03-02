@@ -1,17 +1,17 @@
 import React from "react";
-import "./styles.scss";
+import { Container } from "./styles";
 import Button from "../Buttons";
 
 class CardPopup extends React.Component{
     render() {
         return(
-            <div className="card-popup-container">
-                <Button/>
-            </div>
+            <Container className="card-popup-container">
+                <Button> Go to Checkout</Button>
+            </Container>
         )
     }
         
 }
 
 
-export default CardPopup
+export default CardPopup;

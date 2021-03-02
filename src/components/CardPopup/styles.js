@@ -1,4 +1,6 @@
-.card-popup-container{
+import styled from "styled-components"
+
+export const Container = styled.div`
     position: absolute;
     width: 240px;
     height: 340px;
@@ -10,4 +12,4 @@
     top: 90px;
     right: 40px;
     z-index: 5;
-}
+`;

@@ -1,5 +1,7 @@
+import styled from "styled-components";
 
-.Navbar-container{
+
+export const Container =styled.div`
     width: 95%;
     height: 75px;
     display: flex;
@@ -9,9 +11,9 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-}
+`;
 
-.logo-container{
+export const LogoContainer =styled.div`
     width: fit-content;
     height: fit-content;
     display: flex;
@@ -24,9 +26,9 @@
         height: 60px;
         cursor: pointer;
     }
-}
+`;
 
-.navbar-links{
+export const NavbarLinks =styled.div`
     width: fit-content;
     height: fit-content;
     display: flex;
@@ -36,6 +38,7 @@
     a{
         font-size: 16px;
         font-weight: 400;
+        font-family: 'Open Sans Condensed';
         font-style: normal;
         margin-left: 20px;
         color: #000000;
@@ -49,4 +52,5 @@
         cursor: pointer;
         margin-left: 20px;
     }
-}
+`;
+

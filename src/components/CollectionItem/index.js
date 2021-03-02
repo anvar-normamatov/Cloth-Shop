@@ -1,21 +1,21 @@
 import React from "react";
-import "./styles.scss";
+import {Container, ShopItemContainer, ShopItemFooter,ClothName,CollectionButton} from "./styles.js";
 
 
 const CollectionItem = ({ img,name,price }) => {
     return(
-        <div className="shop-item">
-            <div className="shop-item-container">
+        <Container>
+            <ShopItemContainer>
                 <img src={img} alt=".."/>
-                <div className="collection-button">
+                <CollectionButton className="btn">
                     <p>Add to card</p>
-                </div>
-            </div>
-            <div className="shop-item-footer">
-                <h1>{name}</h1>
-                <h1>{price}</h1>
-            </div>
-        </div>
+                </CollectionButton>
+            </ShopItemContainer>
+            <ShopItemFooter>
+                <ClothName>{name}</ClothName>
+                <ClothName>{price}</ClothName>
+            </ShopItemFooter>
+        </Container>
     )  
 }
 

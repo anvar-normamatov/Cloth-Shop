@@ -1,15 +1,9 @@
 import React from "react";
-import "./styles.scss" ;
+import { Container } from "./styles";
 
-
-
-
-
-const Button = () =>{
+const Button = (props) =>{
     return(
-        <div className="button-primary">
-            Go to checkout
-        </div>
+        <Container {...props} />
     )
 }
 

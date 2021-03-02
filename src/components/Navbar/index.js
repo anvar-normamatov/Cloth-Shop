@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom"
 import CardPopup from "../CardPopup"
-import './styles.scss'
+import { Container,  LogoContainer,NavbarLinks } from './styles.js'
 import IconBag from '../../assets/icon/shopping-bag.png'
-import Iconcrown from "../../assets/icon/royal-crown-of-three-triangles.png";
+import Iconcrown from "../../assets/icon/crown.png";
+
 
 
 //state
@@ -24,22 +25,22 @@ class Navbar extends React.Component{
     }
     render () {
         return(
-            <div className="Navbar-container">
-                <div className ="logo-container">
+            <Container>
+                < LogoContainer>
                     <Link to="/">
                         <img id="logo" src={Iconcrown} alt="logo"/>
                     </Link>
-                </div>
-                <div className="navbar-links">
+                </ LogoContainer>
+                <NavbarLinks >
                     <Link to="/shop">Shop</Link>
                     <Link to="/contact">Contact</Link>
-                    <a href="#">Sign in</a>
+                    <Link to="/sign">Sign in</Link>
                     <img onClick={this.handleClick} src={IconBag} alt="bag"/>
-                </div>
+                </NavbarLinks>
                 {
                     this.state.show === true ? (<CardPopup/>) :null
                 }
-            </div>
+            </Container>
 
         )
     }

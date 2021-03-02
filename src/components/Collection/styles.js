@@ -1,12 +1,17 @@
-.categories-container{
+import styled from "styled-components"
+
+
+
+export const Container =styled.div`
     width: 100%;
     height: fit-content;
     display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-}
-.categories-row{
+`;
+
+export const CategoryRow =styled.div`
     width: 100%;
     height: fit-content;
     display: flex;
@@ -15,8 +20,10 @@
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
-}
-.category-item-above{
+`;
+
+
+export const ItemAbove =styled.div`
     width: 30%;
     height: 300px;
     border: 2px solid black;
@@ -30,15 +37,12 @@
     background-repeat: no-repeat;
     background-size: 100%;
     transition: 3s ease background-size;
-}
-.category-item-above:hover{
-    .item-label{
-        opacity: 0.9;
+    &:hover{
+        background-size: 110%;
     }
-    background-size: 110%;
-}
+`;
 
-.item-label{
+export const ItemLabel =styled.div`
     width: 120px;
     height: 100px;
     display: flex;
@@ -49,20 +53,31 @@
     position: absolute;
     background-color: white;
     opacity: 0.7;
-}
-.item-name{
+    &:hover{
+        opacity: 0.9;
+    }
+`;
+
+
+export const ItemName =styled.h1`
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 700;
+    font-family: 'Open Sans Condensed';
     text-transform: uppercase;
-    color: grey;
-}
-.item-text{
+    color: #4a4a4a;
+    line-height: 5px;
+`;
+
+export const ItemText =styled.h1`
     font-size: 16px;
+    font-family: 'Open Sans Condensed';
     font-weight: 100;
     text-transform: uppercase;
     color: grey;
-}
-.category-item{
+    line-height: 5px;
+`;
+
+export const CategoryItem =styled.div`
     width: 47%;
     height: 55vh;
     border: 2px solid black;
@@ -76,10 +91,8 @@
     background-repeat: no-repeat;
     background-size: 100%;
     transition: 3s ease background-size;
-}
-.category-item:hover{
-    .item-label{
-        opacity: 0.9;
+    &:hover{
+        background-size: 110%;
     }
-    background-size: 110%;
-}
+`;
+

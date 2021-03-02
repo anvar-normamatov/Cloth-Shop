@@ -1,46 +1,46 @@
 import React from "react";
 import data from "../../mock/collection"
-import "./styles.scss";
+import  { Container, CategoryRow, ItemAbove, CategoryItem, ItemLabel, ItemName, ItemText} from "./styles.js";
 
 
 const Collection = () => {
     return (
-        <div className="categories-container">
-            <div className="categories-row">
+        <Container Container>
+            <CategoryRow>
                 {
                     data.slice(0, 3)
                     .map(({id, title,image }) =>(
-                        <div key={id} style={{backgroundImage: `url(${image})`}} className="category-item-above">
-                            <div className='item-label'>
-                                <h1 className="item-name">
+                        <ItemAbove key={id} style={{backgroundImage: `url(${image})`}}>
+                            <ItemLabel>
+                                <ItemName>
                                    {title}      
-                                </h1>
-                                <h1 className="item-text">
+                                </ItemName>
+                                < ItemText>
                                     Shop Now
-                                </h1>
-                            </div>
-                        </div>
+                                </ ItemText>
+                            </ItemLabel>
+                        </ItemAbove>
                     ))
                 }
-            </div>
-            <div className="categories-row">
+            </CategoryRow>
+            <CategoryRow>
                 {
                     data.slice(3, 5)
                     .map(({id, title,image }) =>(
-                        <div key={id} style={{backgroundImage: `url(${image})`}} className="category-item">
-                            <div className='item-label'>
-                                <h1 className="item-name">
+                        <CategoryItem key={id} style={{backgroundImage: `url(${image})`}}>
+                            <ItemLabel>
+                                <ItemName>
                                    {title}      
-                                </h1>
-                                <h1 className="item-text">
+                                </ItemName>
+                                <ItemText>
                                     Shop Now
-                                </h1>
-                            </div>
-                        </div>
+                                </ItemText>
+                            </ItemLabel>
+                        </CategoryItem>
                     ))
                 }
-            </div>
-        </div>
+            </CategoryRow>
+        </Container>
     )
 };
 
